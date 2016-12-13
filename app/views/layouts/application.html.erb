@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+    <title>My Angular App!</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="assets/javascripts/app.js"></script>
   <head>
     <title>Store</title>
     <%= csrf_meta_tags %>
@@ -8,7 +11,10 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body ng-app="flapperNews">
+    <div  ng-controller="MainCtrl">
+      {{::test}}
+    </div>
     <%= yield %>
   </body>
 </html>
